@@ -1,0 +1,103 @@
+ *{
+  outline: red 1px solid;
+}
+
+body {
+  background:url('../images/ipad-content.jpg') no-repeat;
+
+}
+.shopbox {
+  height: 1200px;
+  width: 340px;
+  padding-top: 25%;
+  margin-left: 40%;
+  margin-right: auto;
+  margin-top: auto;
+
+}
+.input-contain {
+  height: 50px;
+  width: 340px;
+  /*margin-right: auto;
+  margin-left: auto;*/
+}
+#listItem {
+  background: transparent;
+  margin-left: 25px;
+  /*margin-bottom: -20px;
+  margin-top: -50px;*/
+  height: 20px;
+  /*padding: 5px 5px 5px 5px;*/
+
+
+}
+.addbtn {
+  display: inline-block;
+   /*background:url('../images/add.png') no-repeat;
+    cursor:pointer;
+    width: 20px;
+    height: 20px;
+    border: none
+    margin-right: auto;
+    margin-left: auto;*/
+
+}
+
+.addbtnimg {
+  /*margin-right: auto;
+  margin-left: auto;*/
+
+
+}
+
+#addList {
+
+}
+
+li {
+  height: 30px;
+  width: 325px;
+  /*padding-left: 10px;*/
+
+}
+.currentList {
+
+}
+
+.left { 
+  display: inline-block;
+  float: left; 
+  margin: .1em 1em 0;
+  background:url('../images/empty-checkbox.png') no-repeat;
+  cursor:pointer;
+  border:none;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  /*padding-left: 25px;*/
+  margin-left: 20px;
+  /*margin-right: auto;
+  /*width:100px;
+    height:100px;*/
+ 
+}
+.left:active, .left:visited  /* use Dot here */{   
+    background:url('../images/checkbox.png') no-repeat;
+}
+
+.right { 
+  display: inline-block;
+  float: right; 
+  /*margin: 0 0 .1em .1em;*/
+  background:url('../images/delete.png') no-repeat;
+  cursor:pointer;
+  border:none;
+  height: 30px;
+  width: 70px;
+  /*padding-left: -50px;*/
+  /*padding-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;*/
+  padding-left: 25px;
+
+  
+}
