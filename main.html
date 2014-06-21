@@ -11,20 +11,23 @@
 <body>
 	<div class= "shopbox">
 		<div class= "input-contain">
-			<input id="listItem">
-				<button type="submit" style="border: 0; background: transparent" class= "addbtn" id= "addList">
-					<img src='images/add.png' class="addbtnimg" width="25" height="25" alt="submit" />
-				</button>
+			<input id="listItem" type="text" name="user">
+			<input id= "addList" type="submit" value="+">
+				<!--ADD PICTURE BUTTON<button class= "addbtn" id= "addList"type="submit" src='images/add.png' style="border: 0; background: transparent">-->
+					<!--<img src='images/add.png' class="addbtnimg" width="25" height="25" alt="submit" />-->
+				<!--</button>-->
 		</div>
-		<br>
-		<br>
 			<ul>
 				<li class= "currentList">
-				<input class="left" type="submit" value="">ITEM<input class="right" type="submit" value="">
+				<input type="button" id="chk" value="Add CheckBox" style="" />
+
+				<!-- ORIG<input class="left" type="submit" value="">-->
+
+				<input class="right" type="submit" value="">
 				</li>
 				<!--<li> <img src="images/empty-checkbox.png" class="left" /><img src="images/x-checkbox.png" class="right" />Popcorn</li>-->
 			</ul>
-		
+
 	</div>
 </body>
 </html>

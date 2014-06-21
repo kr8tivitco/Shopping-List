@@ -3,16 +3,18 @@
 }
 
 body {
-  background:url('../images/ipad-content.jpg') no-repeat;
+  /*background:url('../images/ipad-content.jpg') no-repeat;*/
 
 }
 .shopbox {
   height: 1200px;
   width: 340px;
-  padding-top: 25%;
+  padding-top: 50px; /*FOR EDITING*/
+  /*padding-top: 25%; FOR BACKGROUND
+
   margin-left: 40%;
   margin-right: auto;
-  margin-top: auto;
+  margin-top: auto;*/
 
 }
 .input-contain {
@@ -33,6 +35,9 @@ body {
 }
 .addbtn {
   display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding-top: -10px;
    /*background:url('../images/add.png') no-repeat;
     cursor:pointer;
     width: 20px;
@@ -65,7 +70,7 @@ li {
 }
 
 .left { 
-  display: inline-block;
+  display: none; /*display: inline-block;*/
   float: left; 
   margin: .1em 1em 0;
   background:url('../images/empty-checkbox.png') no-repeat;
@@ -85,7 +90,7 @@ li {
 }
 
 .right { 
-  display: inline-block;
+  display: none; /*display: inline-block;*/
   float: right; 
   /*margin: 0 0 .1em .1em;*/
   background:url('../images/delete.png') no-repeat;
@@ -98,6 +103,9 @@ li {
   margin-left: auto;
   margin-right: auto;*/
   padding-left: 25px;
-
   
+}
+
+button {
+    margin-left: 10px;
 }
