@@ -9,19 +9,31 @@ $(document).ready(function() {
 	$('#addList').click(function(){
     
       var item = $('#listItem').val();
+      var chkBox = $('<input>', { type:"checkbox"});
+      var delBtn = $('<input>', { type:"button"});
       //var itemNum = 0;
       
       //$('.currentList').append($('<li>', entry));
 
+      	$('.currentList').attr("id", "chkBoxNum" + chkBoxNum++).append(chkBox);
+         //alert(" Check # " + chkBoxNum);
 
-   	 //alert("#" + itemNum);
-         $('.currentList').attr("id", "itemNum" + itemNum++).append(item + '<br />' + '<br />');
-         alert("#" + itemNum + " Item Added: " + item);
-         //$('.currentList').text(entry);
+   	 	$('.currentList').attr("id", "itemNum" + itemNum++).append(item); // + '<br />' + '<br />');
+   	 	 //$('.currentList').css('display', 'inline-block').attr("id", "itemNum" + itemNum++).append(item + '<br />' + '<br />');
+         //alert("Item #: " + itemNum + " Item Added: " + item );
+         
+         $('.currentList').attr("id", "delBtnNum" + delBtnNum++).append(delBtn);
 
-     
+         $('.currentList').append('<br />');
+         $('#listItem').val('');
+         //$('.currentList').css('display', 'inline-block').attr("id", "delBtnNum" + delBtnNum++).append(delBtn);
+        // alert(" Delete Btn # " + delBtnNum);
+         
     });
+
+
 });
+
 
 
 
