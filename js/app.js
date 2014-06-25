@@ -1,38 +1,90 @@
 $(document).ready(function() {
-	
-	//var item = $('#listItem').val();
+
+  //var item = $('#listItem').val();
     var itemNum = 0;
-    var chkBoxNum = 0;
-    var delBtnNum = 0;
+    //var chkBoxNum = 0;
+    //var delBtnNum = 0;
 
 
-	$('#addList').click(function(){
+  $('#addList').click(function(){
     
-      var item = $('#listItem').val();
-      var chkBox = $('<input>', { type:"checkbox"});
-      var delBtn = $('<input>', { type:"button"});
-      //var itemNum = 0;
       
-      //$('.currentList').append($('<li>', entry));
 
-      	$('.currentList').attr("id", "chkBoxNum" + chkBoxNum++).append(chkBox);
-         //alert(" Check # " + chkBoxNum);
+      var listItem = $('#listItem').val();
 
-   	 	$('.currentList').attr("id", "itemNum" + itemNum++).append(item); // + '<br />' + '<br />');
-   	 	 //$('.currentList').css('display', 'inline-block').attr("id", "itemNum" + itemNum++).append(item + '<br />' + '<br />');
-         //alert("Item #: " + itemNum + " Item Added: " + item );
-         
-         $('.currentList').attr("id", "delBtnNum" + delBtnNum++).append(delBtn);
+        if (itemNum ==3) {
+            alert('You have reached the list limit');
+        }
+          else {
+            itemNum++;
+      // $('.currentList').append('<input type="checkbox" name="chkBox" >' + listItem + '<input type="submit" name="delBtn" >');  // WORKS ADDS AS TEXT
+            $("#shopList ul").append('<li>' + '<input type="checkbox" name="chkBox" id="check" >' +listItem+ '<input type="submit" id="del" name="delBtn" value="X" >' + '</li>'); //WORKS ADDS AS LI
+     // $("#shopList ul").append('<li>' +listItem+ '</li>');    //WORKS ADD AS LI 
 
-         $('.currentList').append('<br />');
-         $('#listItem').val('');
-         //$('.currentList').css('display', 'inline-block').attr("id", "delBtnNum" + delBtnNum++).append(delBtn);
-        // alert(" Delete Btn # " + delBtnNum);
-         
+          }
+    });
+            //On Delete remove LI entry
+    $("#shopList ul").on('click','input[type=submit]' , function(el){
+            
+               $(this).parent().remove()
+               itemNum--;
     });
 
+    $("#shopList ul").on('click','input[type=checkbox]' , function(){
+            
+      var itemCheckED = $(this).parent();
+                
+          if ($(this).is(':checked') ) {
+              $(itemCheckED).css('textDecoration','line-through');
+                
+            }
+          else {
+                $(itemCheckED).css('textDecoration','none');
+                
+            }
+            
+    });
 
 });
+
+
+
+
+
+
+        
+
+
+
+
+        //var chkBox = $('<input>', { type:"checkbox"}, { id:"checkbox"} { checked:"checked"});
+        //var checkEDBoxID = $(this).attr("id");
+        //var itemCheckED = $(‘#’ + itemNum);
+
+            //$("input[type='checkbox']").val();
+    //function checkboxChkr() { //checks what checkbox are checked & strikes line through item
+             
+         // $('#checkbox .currentList').change(function checkboxChkr(){
+              
+            //  alert("after variable");
+            //});
+
+
+
+
+             //alert("Function checkboxChkr");
+        
+        //var checkEDBoxID = $(this).attr("id");
+             //alert("Variable checkEDBoxID" + checkEDBoxID);
+           // alert("after variable");
+        // if ($('#checkbox').is(':checked')  {
+           // alert("Checking " + checkEDBoxID);
+              //itemCheckED == checkEDBoxID;  
+              //alert(“itemCheckED”); 
+            //$(item[itemNum == itemCheckED”]).wrap(“<strike>”);
+            //});
+    //};
+
 
 
 
@@ -44,14 +96,3 @@ $(document).ready(function() {
 //    }));
 //
 //    });
-
-
-/////////////
-//$('#addList').click(function() {
-//        $('.currentList').animate({
-//        'marginBottom' : "+=30px" //moves down
-//        });
-//    });
-
-//add check box
-//$('.currentList').append('<img src="images/empty-checkbox.png" height="20px" width="20px">').append($('<li>', {

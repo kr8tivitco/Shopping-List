@@ -8,7 +8,7 @@ body {
 }
 .shopbox {
   height: 1200px;
-  width: 500px;
+  width: 200px;
   padding-top: 50px; /*FOR EDITING*/
   /*padding-top: 25%; FOR BACKGROUND
 
@@ -19,7 +19,7 @@ body {
 }
 .input-contain {
   height: 50px;
-  width: 475px;
+  width: 300px;
   /*margin-right: auto;
   margin-left: auto;*/
 }
@@ -105,6 +105,11 @@ li {
   padding-left: 25px;
   
 }
+
+/*#chk {
+  display: none; 
+
+}*/
 
 .box {
   float: left;
