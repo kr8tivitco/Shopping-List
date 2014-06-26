@@ -3,21 +3,23 @@
 }
 
 body {
-  background:url('../images/ipad-content.jpg') no-repeat;
+  /*background:url('../images/ipad-content.jpg') no-repeat;*/
 
 }
 .shopbox {
   height: 1200px;
-  width: 340px;
-  padding-top: 25%;
+  width: 200px;
+  padding-top: 50px; /*FOR EDITING*/
+  /*padding-top: 25%; FOR BACKGROUND
+
   margin-left: 40%;
   margin-right: auto;
-  margin-top: auto;
+  margin-top: auto;*/
 
 }
 .input-contain {
   height: 50px;
-  width: 340px;
+  width: 300px;
   /*margin-right: auto;
   margin-left: auto;*/
 }
@@ -33,6 +35,9 @@ body {
 }
 .addbtn {
   display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding-top: -10px;
    /*background:url('../images/add.png') no-repeat;
     cursor:pointer;
     width: 20px;
@@ -56,7 +61,7 @@ body {
 
 li {
   height: 30px;
-  width: 325px;
+  width: 250px;
   /*padding-left: 10px;*/
 
 }
@@ -65,7 +70,7 @@ li {
 }
 
 .left { 
-  display: inline-block;
+  display: none; /*display: inline-block;*/
   float: left; 
   margin: .1em 1em 0;
   background:url('../images/empty-checkbox.png') no-repeat;
@@ -85,7 +90,7 @@ li {
 }
 
 .right { 
-  display: inline-block;
+  display: none; /*display: inline-block;*/
   float: right; 
   /*margin: 0 0 .1em .1em;*/
   background:url('../images/delete.png') no-repeat;
@@ -98,6 +103,19 @@ li {
   margin-left: auto;
   margin-right: auto;*/
   padding-left: 25px;
-
   
 }
+
+/*#chk {
+  display: none; 
+
+}*/
+
+.box {
+  float: left;
+  display: inline-block;
+  margin-top: 3px;
+  margin-right: 30px;
+  height: 17px;
+  width: 17px;
+  background: url('../images/empty-checkbox.png') 0 0;
