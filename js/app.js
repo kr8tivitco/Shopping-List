@@ -12,21 +12,22 @@ $(document).ready(function() {
 
       var listItem = $('#listItem').val();
 
-        if (itemNum ==3) {
+        if (itemNum ==5) {
             alert('You have reached the list limit');
         }
           else {
             itemNum++;
       // $('.currentList').append('<input type="checkbox" name="chkBox" >' + listItem + '<input type="submit" name="delBtn" >');  // WORKS ADDS AS TEXT
             $("#shopList ul").append('<li>' + '<input type="checkbox" name="chkBox" id="check" >' +listItem+ '<input type="submit" id="del" name="delBtn" value="X" >' + '</li>'); //WORKS ADDS AS LI
-     // $("#shopList ul").append('<li>' +listItem+ '</li>');    //WORKS ADD AS LI 
-
+     
           }
-    });
+          $('#listItem').val(" ");
+  });
             //On Delete remove LI entry
     $("#shopList ul").on('click','input[type=submit]' , function(el){
             
                $(this).parent().remove()
+               
                itemNum--;
     });
 
@@ -44,6 +45,7 @@ $(document).ready(function() {
             }
             
     });
+
 
 });
 

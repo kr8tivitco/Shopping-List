@@ -8,31 +8,39 @@ body {
 }
 .shopbox {
   height: 1200px;
-  width: 200px;
+  width: 350px;
   padding-top: 50px; /*FOR EDITING*/
-  /*padding-top: 25%; FOR BACKGROUND
+  /*padding-top: 25%; FOR BACKGROUND*/
 
-  margin-left: 40%;
+  margin-left:auto ;
   margin-right: auto;
-  margin-top: auto;*/
+  margin-top: auto;
 
 }
 .input-contain {
-  height: 50px;
+  height: 30px;
   width: 300px;
+  margin-left:auto ;
+  margin-right: auto;
+
   /*margin-right: auto;
   margin-left: auto;*/
 }
 #listItem {
   background: transparent;
-  margin-left: 25px;
+  margin-left:auto ;
+  margin-right: auto;
   /*margin-bottom: -20px;
   margin-top: -50px;*/
-  height: 20px;
+  height: 25px;
+  width: 250px;
   /*padding: 5px 5px 5px 5px;*/
 
-
 }
+
+
+
+
 .addbtn {
   display: inline-block;
   width: 25px;
@@ -60,13 +68,34 @@ body {
 }
 
 li {
-  height: 30px;
-  width: 250px;
+  /*height: 20px;
+  width: 200px;
   /*padding-left: 10px;*/
+  }
+
+li:hover {
+  background:#FF2400;
+  opacity: 0.7;
+
 
 }
+
+#uList {
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+  /*width: 200px; */
+
+}
+
+
 .currentList {
 
+}
+
+#check {
+  display: none; 
+  margin-left: -50px;
 }
 
 .left { 
@@ -106,16 +135,3 @@ li {
   
 }
 
-/*#chk {
-  display: none; 
-
-}*/
-
-.box {
-  float: left;
-  display: inline-block;
-  margin-top: 3px;
-  margin-right: 30px;
-  height: 17px;
-  width: 17px;
-  background: url('../images/empty-checkbox.png') 0 0;
