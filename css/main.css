@@ -4,24 +4,39 @@
 
 body {
   /*background:url('../images/ipad-content.jpg') no-repeat;*/
-
+  padding-top: 40px;
 }
 .shopbox {
-  height: 1200px;
+  height: 500px;
   width: 350px;
-  padding-top: 50px; /*FOR EDITING*/
+  padding-top: 40px; /*FOR EDITING*/
   /*padding-top: 25%; FOR BACKGROUND*/
+
+  border:2px solid;
+  border-radius: 10px;
 
   margin-left:auto ;
   margin-right: auto;
   margin-top: auto;
+  margin-bottom: auto;
 
+  
+}
+
+p {
+  text-align: center;
+  padding-bottom: 40px;
+
+  /*border:2px solid;*/
+
+  background-color: #FF5050; 
 }
 .input-contain {
   height: 30px;
   width: 300px;
   margin-left:auto ;
   margin-right: auto;
+  padding-bottom: 5px;
 
   /*margin-right: auto;
   margin-left: auto;*/
@@ -38,43 +53,18 @@ body {
 
 }
 
-
-
-
-.addbtn {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  padding-top: -10px;
-   /*background:url('../images/add.png') no-repeat;
-    cursor:pointer;
-    width: 20px;
-    height: 20px;
-    border: none
-    margin-right: auto;
-    margin-left: auto;*/
-
-}
-
-.addbtnimg {
-  /*margin-right: auto;
-  margin-left: auto;*/
-
-
-}
-
-#addList {
-
-}
-
 li {
-  /*height: 20px;
-  width: 200px;
-  /*padding-left: 10px;*/
+  height: 20px;
+  padding-bottom: 5px; 
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+
+
   }
 
 li:hover {
-  background:#FF2400;
+  background:#0066CC;
   opacity: 0.7;
 
 
@@ -83,7 +73,7 @@ li:hover {
 #uList {
   list-style-type: none; 
   margin: 0; 
-  padding: 0; 
+  padding: 5px; 
   /*width: 200px; */
 
 }
@@ -93,45 +83,37 @@ li:hover {
 
 }
 
-#check {
-  display: none; 
-  margin-left: -50px;
+#chkBox{
+  /*width: 25px;
+  height: 0px;
+  padding: 0 10px 0 0;*/
+   display: block;
+  clear: left;
+  float: left;
+
 }
 
-.left { 
-  display: none; /*display: inline-block;*/
-  float: left; 
-  margin: .1em 1em 0;
-  background:url('../images/empty-checkbox.png') no-repeat;
-  cursor:pointer;
-  border:none;
-  padding-right: 20px;
-  padding-bottom: 10px;
-  /*padding-left: 25px;*/
-  margin-left: 20px;
-  /*margin-right: auto;
-  /*width:100px;
-    height:100px;*/
- 
-}
-.left:active, .left:visited  /* use Dot here */{   
-    background:url('../images/checkbox.png') no-repeat;
+#del {
+  /*width: 25px;
+  height: 0px;*/
+  /*padding: 10px 10px 10px 10px;*/
+  display: block;
+  clear: right;
+  float: right;
+
+
+
 }
 
-.right { 
-  display: none; /*display: inline-block;*/
-  float: right; 
-  /*margin: 0 0 .1em .1em;*/
-  background:url('../images/delete.png') no-repeat;
-  cursor:pointer;
-  border:none;
-  height: 30px;
-  width: 70px;
-  /*padding-left: -50px;*/
-  /*padding-bottom: 15px;
-  margin-left: auto;
-  margin-right: auto;*/
-  padding-left: 25px;
-  
-}
+/*#boxCheck {
+  display: none;
+  width: 30px;
+  height: 50px;
+  padding: 0 5px 0 0;
+  background: url('../images/empty-checkbox.png') no-repeat;
+  display: block;
+  clear: left;
+  float: left;
+
+}*/
 

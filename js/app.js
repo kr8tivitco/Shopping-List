@@ -15,14 +15,28 @@ $(document).ready(function() {
         if (itemNum ==5) {
             alert('You have reached the list limit');
         }
+          
+          else if ($('#listItem').val() == " ") {
+            alert('Please Input List Item');
+          
+          }
+          
           else {
             itemNum++;
       // $('.currentList').append('<input type="checkbox" name="chkBox" >' + listItem + '<input type="submit" name="delBtn" >');  // WORKS ADDS AS TEXT
-            $("#shopList ul").append('<li>' + '<input type="checkbox" name="chkBox" id="check" >' +listItem+ '<input type="submit" id="del" name="delBtn" value="X" >' + '</li>'); //WORKS ADDS AS LI
-     
-          }
-          $('#listItem').val(" ");
+            $("#shopList ul").append('<li>' + '<input type="checkbox" name="chkBox" id="chkBox" >' +listItem+ '<input type="submit" id="del" name="delBtn" value="X" >' + '</li>'); //WORKS ADDS AS LI
+          // $("#shopList ul").append('<li>' + '<input type="checkbox" id="boxCheck" >' +listItem + '</li>')
+
+
+
+            //$('#listItem').val(" ");
+          }        
+          
   });
+            
+
+
+
             //On Delete remove LI entry
     $("#shopList ul").on('click','input[type=submit]' , function(el){
             
