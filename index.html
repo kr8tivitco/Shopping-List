@@ -1,35 +1,54 @@
 <!doctype html>
+
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	
 	<title>Shopping List</title>
+
+	<!-- Meta Tags -->
+	<meta charset="UTF-8">
+
+	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/main.css">
 	<script src="http://code.jquery.com/jquery.min.js"></script>
-	<script src="js/app.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 </head>
 <body>
-	<div class= "shopbox">
-			<p>Shopping List</p>
-		<div class= "input-contain">
-			
-				<input id="listItem" type="text" name="user" placeholder = "Add List Item">
-				<input id= "addList" type="submit" value="+">
-
-				<!--ADD PICTURE BUTTON<button class= "addbtn" id= "addList"type="submit" src='images/add.png' style="border: 0; background: transparent">-->
-					<!--<img src='images/add.png' class="addbtnimg" width="25" height="25" alt="submit" />-->
-				<!--</button>-->
-			
-		</div>
-		<div id="shopList">
-			<ul class= "uList">
-				<!--<li class= "currentList"></li>
-				<input id= "boxCheck" type="checkbox">-->
-			</ul>
-
-					
-		</div>
-
+	<div class="directions-contain">
+		<ol class= "direcOL">
+			<li>Enter Listem Item & Press Add</li>
+			<li>Check Off Items You Have Purchased</li>
+			<li>Delete Checked Items Using Trashcan</li>
+		</ol>
 	</div>
+
+	<div class= "shopbox">
+			<div class="header-contain">
+			<h2>Shopping List</h2>
+			<h6>Click for Directions</h6>
+			</div>
+		<div class= "input-contain">
+				<form method="post">
+					<input type="text" required name="user" id="listItem" class="text" autocomplete="off" placeholder = "Add List Item" />
+					<input type="submit" id= "addList" value= "Add"/>
+				</form>	
+		</div>
+
+		<div id="shopList">
+			<ul class= "uList"></ul>		 	
+		</div>
+
+		<div class= "trashcan-contain">
+			
+			<form class="delForm"><input type="image" src='images/trash.png' id="trashcanBtn" name="trashcan" alt="submit">
+
+			<label for="trashcanBtn" class="trashLbl">Delete Items</label>
+			
+			</form>
+		</div>
+	</div>
+	
+	
 </body>
 </html>

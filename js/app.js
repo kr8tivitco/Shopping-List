@@ -1,114 +1,101 @@
 $(document).ready(function() {
 
+  $('h6').click(function() {
+    $('.directions-contain').animate({width: 'toggle'});
+    
+  });
+
+
+
   //var item = $('#listItem').val();
     var itemNum = 0;
-    //var chkBoxNum = 0;
-    //var delBtnNum = 0;
-
-
-  $('#addList').click(function(){
+    
+  $('#addList').click(function(e){
+        e.preventDefault();
     
       
 
       var listItem = $('#listItem').val();
 
-        if (itemNum ==5) {
+        if (itemNum ==10) {
             alert('You have reached the list limit');
         }
           
-          else if ($('#listItem').val() == " ") {
+          /*else if ($('#listItem').val() == " ") {
             alert('Please Input List Item');
           
-          }
+          }*/
           
           else {
             itemNum++;
       // $('.currentList').append('<input type="checkbox" name="chkBox" >' + listItem + '<input type="submit" name="delBtn" >');  // WORKS ADDS AS TEXT
-            $("#shopList ul").append('<li>' + '<input type="checkbox" name="chkBox" id="chkBox" >' +listItem+ '<input type="submit" id="del" name="delBtn" value="X" >' + '</li>'); //WORKS ADDS AS LI
-          // $("#shopList ul").append('<li>' + '<input type="checkbox" id="boxCheck" >' +listItem + '</li>')
+           // $("#shopList ul").append('<li>' + '<input type="checkbox" name="chkBox" id="chkBox" >' +listItem+ '<input type="submit" id="del" name="delBtn" value="X" >' + '</li>'); //WORKS ADDS AS LI w/ checkbox & delete button
+              $("#shopList ul").append('<li class="appendLiItem">' + '<input type="checkbox" name="chkBox" id="chkBox" >' +listItem+ '</li>');
 
 
-
-            //$('#listItem').val(" ");
+            $('#listItem').val(" ");
           }        
-          
   });
             
+            //////////////CAPABILITY YOU WANT TO ADD//////////////////////////
+            //1. IF ITEM CHECK OUTLINE LI CHANGES FROM WHITE TO ANOTHER COLOR    100% COMPLETE
+            //2. GET REQUIRED ATTR TO WORK
+            //3. ADD HOW MANY LIST ITEMS
+            //4. ADD DIRECTIONS THAT SLIDE IN                                     100% COMPLETE
 
 
-
-            //On Delete remove LI entry
-    $("#shopList ul").on('click','input[type=submit]' , function(el){
+            //On Delete remove LI entry Kriston
+      /*$("#shopList ul").on('click','input[type=submit]' , function(el){
             
-               $(this).parent().remove()
+               $(this).parent().remove();
                
                itemNum--;
-    });
+      });*/
 
+    //removes list items
+    
+    /*$('#shopList ul').on('click', '.delete', function(e){
+
+      e.preventDefault(); 
+
+        $(this).parent().remove();
+
+                itemNum--;
+      }); */
+
+ 
+    //crosses off list items Kriston
     $("#shopList ul").on('click','input[type=checkbox]' , function(){
             
       var itemCheckED = $(this).parent();
                 
           if ($(this).is(':checked') ) {
-              $(itemCheckED).css('textDecoration','line-through');
-                
-            }
+                $(itemCheckED).css('textDecoration','line-through');
+                $(itemCheckED).css('border-top', '2px solid #4A96AD');
+                $(itemCheckED).css('border-bottom', '2px solid #4A96AD');
+                $(itemCheckED).css('border-left', '4px solid #4A96AD');
+                $(itemCheckED).css('border-right  ', '4px solid #4A96AD ');  
+
+          }
           else {
                 $(itemCheckED).css('textDecoration','none');
+                $(itemCheckED).css('border-top', '2px solid white');
+                $(itemCheckED).css('border-bottom', '2px solid white');
+                $(itemCheckED).css('border-left', '4px solid white');
+                $(itemCheckED).css('border-right  ', '4px solid white');
                 
-            }
+          }
             
     });
+
+        //$('.trashcan-contain').on('click', '#trashcanBtn', function(e){
+            
+            //var checkedItemDel = $(this).closest('#shopList').find('#chkBox:checked').parent();
+            //$('##chkBox').is(':checked');
+              //checkedItemDel.hide();
+
+       // });
 
 
 });
 
-
-
-
-
-
-        
-
-
-
-
-        //var chkBox = $('<input>', { type:"checkbox"}, { id:"checkbox"} { checked:"checked"});
-        //var checkEDBoxID = $(this).attr("id");
-        //var itemCheckED = $(‘#’ + itemNum);
-
-            //$("input[type='checkbox']").val();
-    //function checkboxChkr() { //checks what checkbox are checked & strikes line through item
-             
-         // $('#checkbox .currentList').change(function checkboxChkr(){
-              
-            //  alert("after variable");
-            //});
-
-
-
-
-             //alert("Function checkboxChkr");
-        
-        //var checkEDBoxID = $(this).attr("id");
-             //alert("Variable checkEDBoxID" + checkEDBoxID);
-           // alert("after variable");
-        // if ($('#checkbox').is(':checked')  {
-           // alert("Checking " + checkEDBoxID);
-              //itemCheckED == checkEDBoxID;  
-              //alert(“itemCheckED”); 
-            //$(item[itemNum == itemCheckED”]).wrap(“<strike>”);
-            //});
-    //};
-
-
-
-
-
-//ORIG add list item WORKING
-//$('#addList').click(function(){
-//    $('.currentList').append($('<li>', {
-//         text: $('#listItem').val()
-//    }));
-//
-//    });
