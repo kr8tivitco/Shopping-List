@@ -15,18 +15,26 @@
 	<script type="text/javascript" src="js/app.js"></script>
 </head>
 <body>
-	<div class="directions-contain">
+	<!--<div class="directions-contain">
 		<ol class= "direcOL">
 			<li>Enter Listem Item & Press Add</li>
 			<li>Check Off Items You Have Purchased</li>
 			<li>Delete Checked Items Using Trashcan</li>
 		</ol>
-	</div>
+	</div>-->
 
 	<div class= "shopbox">
 			<div class="header-contain">
 			<h2>Shopping List</h2>
-			<h6>Click for Directions</h6>
+			<h6 class="directions">Click for Directions</h6>
+				<div class="directions-contain">
+					<ol class= "direcOL">
+						<li>Enter Listem Item & Press Add</li>
+						<li>Check Off Items You Have Purchased</li>
+						<li>Delete Checked Items Using Trashcan</li>
+					</ol>
+				</div>		
+			<span class="itemCount"></span>
 			</div>
 		<div class= "input-contain">
 				<form method="post">
@@ -39,12 +47,12 @@
 			<ul class= "uList"></ul>		 	
 		</div>
 
-		<div class= "trashcan-contain">
+		<div id= "trashcan-contain">
 			
-			<form class="delForm"><input type="image" src='images/trash.png' id="trashcanBtn" name="trashcan" alt="submit">
+			<form class="delForm"><input type="image" src='images/trash.png' id="trashcanBtn" class="trashcanBtn" name="trashcan">
 
 			<label for="trashcanBtn" class="trashLbl">Delete Items</label>
-			
+			<span class="chkQty"></span>
 			</form>
 		</div>
 	</div>

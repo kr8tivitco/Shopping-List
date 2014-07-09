@@ -16,17 +16,22 @@ body {
 .directions-contain {
   
   position: absolute;
-  top: 30px;
-  left: 775px;
-  
+  /*top: 30px;*/
+  top: 90px;
+  /*left: 785px; */
+  left: auto;  
   height: 60px;
   width: 225px;
 
   background-color: #E44424;
+  opacity: .7;
 
-  border-radius: 7px;
+  border-radius: 7px 7px 7px 7px;
 
   display: none;
+  margin-left: 70px;
+  margin-right: auto;
+  
 
 }
 
@@ -89,7 +94,7 @@ h2 {
   color: white;
 }
 
-h6 {
+.directions {
 
   text-align: center;
 
@@ -320,6 +325,16 @@ input[type=checkbox]:hover {
 
   font-weight:bold;
   color: #A2AB58;
-  font-size: 75%;
+  font-size: 65%;
 }
 
+.chkQty{
+  position: relative;
+    top: 10px;
+    left: 10px;
+
+  color: white;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 75%;
+
+}
